@@ -34,7 +34,7 @@ void red2(){
     chassis.moveToPoint(-14, 38,1000,{.forwards=false,.minSpeed=20,.earlyExitRange=3});
     chassis.turnToPoint(-36,28,1000,{.minSpeed=20,.earlyExitRange=3});
     fast_move(-36,28,2000,true);
-
+    
     //touch bar
     chassis.turnToPoint(20,10,1000,{.minSpeed=5,.earlyExitRange=3});
     chassis.moveToPoint(20,10,2000,{.minSpeed=5,.earlyExitRange=3});
