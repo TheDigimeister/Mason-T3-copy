@@ -67,4 +67,3 @@ void red2(){
     arm_move = true;
     arm.move(0);
 
-}
