@@ -142,7 +142,7 @@ bin/autons/training_auton.cpp.o: src/autons/training_auton.cpp \
  include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/drive.hpp \
  include/autonChooser.hpp include/autons.hpp include/robot.hpp \
- include/ringSort.hpp
+ include/ringSort.hpp include/ringSort.hpp
 include/main.h:
 include/api.h:
 include/pros/adi.h:
@@ -384,4 +384,5 @@ include/drive.hpp:
 include/autonChooser.hpp:
 include/autons.hpp:
 include/robot.hpp:
+include/ringSort.hpp:
 include/ringSort.hpp:
