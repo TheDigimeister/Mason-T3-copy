@@ -164,33 +164,33 @@ void chooser(int& status){
 void run_auton(int selected){
     switch (selected)
     {
-    case -4:
-        blue4();
-        break;
-    case -3:
-        blue3();
-        break;
-    case -2:
-        blue2();
-        break;
-    case -1:
-        blue1();
-        break;
-    case 1:
-        red1();
-        break;
-    case 2:
-        red2();
-        break;
-    case 3:
-        red3();
-        break;
-    case 4:
-        red4();
-        break;
-    case 5:
-        skills();
-        break;
+    // case -4:
+    //     blue4();
+    //     break;
+    // case -3:
+    //     blue3();
+    //     break;
+    // case -2:
+    //     blue2();
+    //     break;
+    // case -1:
+    //     blue1();
+    //     break;
+    // case 1:
+    //     red1();
+    //     break;
+    // case 2:
+    //     red2();
+    //     break;
+    // case 3:
+    //     red3();
+    //     break;
+    // case 4:
+    //     red4();
+    //     break;
+    // case 5:
+    //     skills();
+    //     break;
     case 6:
         training_auton();
         break;

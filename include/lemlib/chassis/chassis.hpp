@@ -323,15 +323,6 @@ struct MoveToPointParams {
         float earlyExitRange = 0;
 };
 
-
-struct MoveDistanceParams {
-        bool forwards = true;
-        float maxSpeed = 127;
-        float minSpeed = 0;
-        float earlyExitRange = 0;
-        bool straight = false;
-};
-
 // default drive curve
 extern ExpoDriveCurve defaultDriveCurve;
 
@@ -689,11 +680,6 @@ class Chassis {
          * @endcode
          */
         void moveToPoint(float x, float y, int timeout, MoveToPointParams params = {}, bool async = true);
-
-        // justin template addon
-        void moveDistance(float distance, int timeout, MoveDistanceParams params = {}, bool async = true);
-
-
         /**
          * @brief Move the chassis along a path
          *
@@ -723,12 +709,11 @@ class Chassis {
          */
         void follow(const asset& path, float lookahead, int timeout, bool forwards = true, bool async = true);
         /**
-         * @brief Control the robot during the driver using the arcade drive control scheme. In this control scheme one
-         * joystick axis controls the forwards and backwards movement of the robot, while the other joystick axis
-
-         * controls  the robot's turning
-         * @param throttle speed to move forward or backward. Takes an input from -127 to 127.
-         * @param turn speed to turn. Takes an input from -127 to 127.
+         * @brief Control the robot during the driver using the tank drive control scheme. In this control scheme one
+         * joystick axis controls the left motors' forward and backwards movement of the robot, while the other joystick
+         * axis controls right motors' forward and backward movement.
+         * @param left speed to move left wheels forward or backward. Takes an input from -127 to 127.
+         * @param right speed to move right wheels forward or backward. Takes an input from -127 to 127.
          * @param disableDriveCurve whether to disable the drive curve or not. If disabled, uses a linear curve with no
          * deadzone or minimum power
          *

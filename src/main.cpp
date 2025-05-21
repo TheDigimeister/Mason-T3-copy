@@ -9,7 +9,7 @@
 true: display odometry data and will run the test auton
 false: display competition screen to choose different autons
 */
-bool testing = false;
+bool testing = true;
 
 int auton_status = 0;
 int test_auton = 6;
@@ -225,16 +225,16 @@ void opcontrol() {
 			y_pressed = false;
 		}
 
-		if(master.get_digital(DIGITAL_LEFT)){
-			chassis.moveDistance(8,1000,{.forwards=false});
-			chassis.waitUntil(4);
-			set_intake_speed(-25);
-			arm_move=true;
-			arm.move(127);
-			pros::delay(1000);
-			set_intake_speed(127);
-			arm.move(0);
-		}
+		// if(master.get_digital(DIGITAL_LEFT)){
+		// 	chassis.moveDistance(8,1000,{.forwards=false});
+		// 	chassis.waitUntil(4);
+		// 	set_intake_speed(-25);
+		// 	arm_move=true;
+		// 	arm.move(127);
+		// 	pros::delay(1000);
+		// 	set_intake_speed(127);
+		// 	arm.move(0);
+		// }
 		#pragma endregion arm
 		
 		#pragma region intake r1
