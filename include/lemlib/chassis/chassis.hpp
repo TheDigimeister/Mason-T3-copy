@@ -219,6 +219,14 @@ struct TurnToHeadingParams {
         float earlyExitRange = 0;
 };
 
+struct MoveDistanceParams {
+        bool forwards = true;
+        float maxSpeed = 127;
+        float minSpeed = 0;
+        float earlyExitRange = 0;
+        bool straight = false;
+};
+
 /**
  * @brief Enum class DriveSide
  *
@@ -707,6 +715,10 @@ class Chassis {
          * }
          * @endcode
          */
+
+         // justin template addon
+        void moveDistance(float distance, int timeout, MoveDistanceParams params = {}, bool async = true);
+
         void follow(const asset& path, float lookahead, int timeout, bool forwards = true, bool async = true);
         /**
          * @brief Control the robot during the driver using the tank drive control scheme. In this control scheme one

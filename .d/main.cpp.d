@@ -142,7 +142,7 @@ bin/main.cpp.o: src/main.cpp include/main.h include/api.h \
  include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/drive.hpp \
  include/autonChooser.hpp include/autons.hpp include/robot.hpp \
- include/ringSort.hpp include/ringSort.hpp
+ include/ringSort.hpp include/ringSort.hpp include/lemlib-tarball/api.hpp
 include/main.h:
 include/api.h:
 include/pros/adi.h:
@@ -386,3 +386,4 @@ include/autons.hpp:
 include/robot.hpp:
 include/ringSort.hpp:
 include/ringSort.hpp:
+include/lemlib-tarball/api.hpp:

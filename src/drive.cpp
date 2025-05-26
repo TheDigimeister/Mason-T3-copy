@@ -16,7 +16,7 @@ lemlib::Drivetrain drivetrain(&left,
                               2); //horizontal drift
 
 lemlib::TrackingWheel horizontal_tracking_wheel(&horizontal_enc,lemlib::Omniwheel::NEW_2, -1.875);
-lemlib::TrackingWheel vertical_tracking_wheel(&vertical_enc,lemlib::Omniwheel::NEW_2, -.25); //-.53125
+lemlib::TrackingWheel vertical_tracking_wheel(&vertical_enc,lemlib::Omniwheel::NEW_2, -.5); //-.53125
 
 lemlib::OdomSensors sensors(&vertical_tracking_wheel,nullptr,&horizontal_tracking_wheel,nullptr,&imu);
 
@@ -31,17 +31,28 @@ lemlib::ControllerSettings lateral_controller(10, // proportional gain (kP)
                                               0 // maximum acceleration (slew)
 );
 
-lemlib::ControllerSettings angular_controller(6, // proportional gain (kP)
+// lemlib::ControllerSettings angular_controller(6, // proportional gain (kP)
+//                                               0, // integral gain (kI)
+//                                               60, // derivative gain (kD)
+//                                               3, // anti windup
+//                                               1, // small error range, in degrees
+//                                               100, // small error range timeout, in milliseconds
+//                                               3, // large error range, in degrees
+//                                               300, // large error range timeout, in milliseconds
+//                                               0 // maximum acceleration (slew)
+// );
+
+// testing angular controller settings
+lemlib::ControllerSettings angular_controller(0, // proportional gain (kP)
                                               0, // integral gain (kI)
-                                              60, // derivative gain (kD)
-                                              3, // anti windup
-                                              1, // small error range, in degrees
-                                              100, // small error range timeout, in milliseconds
-                                              3, // large error range, in degrees
-                                              300, // large error range timeout, in milliseconds
+                                              0, // derivative gain (kD)
+                                              0, // anti windup
+                                              0, // small error range, in degrees
+                                              0, // small error range timeout, in milliseconds
+                                              0, // large error range, in degrees
+                                              0, // large error range timeout, in milliseconds
                                               0 // maximum acceleration (slew)
 );
-
 
 lemlib::Chassis chassis(drivetrain,
                     lateral_controller,
