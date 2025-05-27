@@ -6,6 +6,8 @@ firmware/*.ld
 firmware/*.mk
 firmware/*.elf
 firmware/*.bin
+*.package.bin
+*.package.elf
 *.o
 *.cpp.o
 *.d
