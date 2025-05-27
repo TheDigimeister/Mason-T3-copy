@@ -194,6 +194,9 @@ void run_auton(int selected){
     case 6:
         training_auton();
         break;
+    case 7:
+        PID_test();
+        break;
     default:
         break;
     }
