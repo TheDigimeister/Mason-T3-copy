@@ -1,6 +1,4 @@
 #include "main.h"
-#include "pros/rtos.hpp"
-#include "ringSort.hpp"
 #include "lemlib-tarball/api.hpp"
 ASSET(pushbacktest_txt);
 
@@ -17,8 +15,8 @@ void training_auton(){
 
     arm_move=false;
 
-    chassis.follow(decoder["Path 1"],28,20000);
-    chassis.follow(decoder["Path 2"],28,20000,false);
+    chassis.follow(decoder["Path 1"],15,20000);
+    chassis.follow(decoder["Path 2"],15,20000,false);
 
     // chassis.waitUntil(34);
     // set_intake_speed(127);
